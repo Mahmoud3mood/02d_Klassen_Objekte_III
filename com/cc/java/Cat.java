@@ -1,3 +1,5 @@
+// CAT
+
 package com.cc.java;
 
 public class Cat {
@@ -6,6 +8,7 @@ public class Cat {
   private String furColor;
   private int age; 
 
+  private int counter;
 
 public Cat(String name, String furColor, int age) {
     this.name = name;
@@ -25,9 +28,24 @@ public String getStringAttributes(String op) {
 }
 
 public String getAge() {
-    return String.valueOf(age);
-  }
+    return checkCompliance();
+}
 
+private String checkCompliance(){
+
+  counter++;
+
+  switch (counter) {
+    case 1:
+      return "This is an inappropriate question!"; // 1st time
+    case 2:
+      return "I've told you once!"; // 2nd time
+    case 3:
+      return "Talk to the hand!"; // 3rd time
+    default:
+      return "1#!?&&%"; //4th ++
+  }
+  
+}
 
 }
-  
